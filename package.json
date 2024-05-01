@@ -9,14 +9,20 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pnpm eslint --fix"
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "eslint --fix"
+    ]
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "prettier": "^3.2.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.1.1",
