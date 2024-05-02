@@ -1,4 +1,2 @@
-import express from 'express'
-const app = express()
-console.log("apppp-------")
-
+// import express, { Express } from 'express'
+// const app: Express = express()
