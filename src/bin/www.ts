@@ -1,17 +1,17 @@
-#!/usr/bin/env node
 
-/**
- * Module dependencies.
- */
+
+// import app from 'app';
+
 import debugLib from 'debug';
 import http from 'http';
 import { AddressInfo } from 'net';
-import exress, { Express } from 'express'
-const app: Express = exress();
+import app from '../app';
+
+
+
 const debug = debugLib('blog-project:server');
-/**
- * Get port from environment and store in Express.
- */
+
+
 const normalizePort = (val: string): number | string | boolean => {
     const port = parseInt(val, 10);
 

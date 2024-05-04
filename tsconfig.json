@@ -1,18 +1,18 @@
 {
   "compilerOptions": {
-    /* Visit https://aka.ms/tsconfig to read more about this file */
-    "module": "ES6" /* Specify what module code is generated. */,
-    "target": "ES2020" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
-    "skipLibCheck": true /* Skip type checking all .d.ts files. */,
-    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
-    "strict": true /* Enable all strict type-checking options. */,
-    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
-    "sourceMap": true /* Create source map files for emitted JavaScript files. */,
-    "outDir": "./dist" /* Specify an output folder for all emitted files. */,
-    "moduleResolution": "Node" /* Specify how TypeScript looks up a file from a given module specifier. */,
-    "resolveJsonModule": true /* Enable importing .json files. */,
-    "declaration": true /* Generate .d.ts files from TypeScript and JavaScript files in your project. */,
+    "module": "ESNext",
+    "target": "ES2020",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "declaration": true,
     "rootDir": "./src"
+
     // "allowJs": true
 
     /* Projects */
@@ -37,8 +37,6 @@
     // "moduleDetection": "auto",                        /* Control what method is used to detect module-format JS files. */
 
     /* Modules */
-    // "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
-    // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
     // "typeRoots": [],                                  /* Specify multiple folders that act like './node_modules/@types'. */
     // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
@@ -105,5 +103,13 @@
 
     /* Completeness */
     // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
-  }
+  },
+  "ts-node": {
+    "experimentalSpecifierResolution": "node",
+    "transpileOnly": true,
+    "esm": true,
+    "require": ["tsconfig-paths/register"]
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"]
 }
