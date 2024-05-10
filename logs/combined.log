@@ -1,0 +1,78 @@
+2024-05-10 10:36:35 error: PrismaClientValidationError: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  data: {
+    email: "abcde@gmail.com",
+    password: "1111",
+    role: undefined,
++   name: String
+  }
+}
+
+Argument `name` is missing.
+2024-05-10 10:36:51 error: PrismaClientValidationError: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  data: {
+    email: "abcde@gmail.com",
+    password: "1111",
+    role: undefined,
++   name: String
+  }
+}
+
+Argument `name` is missing.
+2024-05-10 10:48:31 error: PrismaClientValidationError: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  data: {
+    email: "abcde@gmail.com",
+    password: "1111",
+    role: undefined,
++   name: String
+  }
+}
+
+Argument `name` is missing.
+2024-05-10 10:49:03 error: PrismaClientValidationError: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  data: {
+    email: "abcde@gmail.com",
+    password: "1111",
+    role: undefined,
++   name: String
+  }
+}
+
+Argument `name` is missing.
+2024-05-10 11:59:06 error: PrismaClientValidationError: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  data: {
+    email: "abcde@gmail.com",
+    password: undefined,
+    role: undefined,
++   name: String
+  }
+}
+
+Argument `name` is missing.
+2024-05-10 11:59:48 error: PrismaClientValidationError: 
+Invalid `prisma.user.create()` invocation:
+
+{
+  data: {
+    email: "abcde@gmail.com",
+    password: undefined,
+    role: undefined,
++   name: String
+  }
+}
+
+Argument `name` is missing.
