@@ -1,2 +1,5 @@
 export * from './ResponseModel'
-export * from './user/CreateUserInterface'
+export * from './user/CreateUser.Interface'
+export * from './user/LoginUser.interface'
+export * from './blogPost/BlogPostCreate.interface'
+export * from './jwt/GenerateJWT.interface'

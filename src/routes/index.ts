@@ -1,8 +1,7 @@
 import express, { Router } from 'express'
 const indexRouter: Router = express.Router()
 import { router as userRouter } from './user.routes'
-import { router as postRouter } from './post.routes'
-
+import { router as postRouter } from './blogPost.routes'
 
 
 const routes = [
@@ -11,7 +10,7 @@ const routes = [
         router: userRouter
     },
     {
-        path: '/post',
+        path: '/blog',
         router: postRouter
     },
 ]

@@ -1,9 +1,5 @@
-// export * from './Auth.service'
-import AuthService from './Auth.service'
-import Service from './Service'
-
+import AuthService from "./Auth.service";
+import BlogPostService from "./BlogPost.service";
+import Service from "./Service";
 // =>  Exporting the modules
-export {
-    AuthService,
-    Service
-}
+export { AuthService, Service, BlogPostService };

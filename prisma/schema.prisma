@@ -10,7 +10,7 @@ datasource db {
 
 
 model User {
-  id    Int @id @default(autoincrement())
+  id    String @id @default(uuid())
   name  String
   email String  @unique
   role Role @default(user)
@@ -22,13 +22,13 @@ model User {
 }
 
 model Post {
-  id        Int     @id @default(autoincrement())
+  id        String     @id @default(uuid())
   title     String
   content   String
   image String?
   published Boolean @default(true)
   author User @relation(fields: [authorId], references: [id])
-  authorId  Int
+  authorId  String
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now())
   @@index([id, authorId])

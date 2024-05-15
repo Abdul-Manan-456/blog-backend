@@ -1,78 +1,112 @@
-2024-05-10 10:36:35 error: PrismaClientValidationError: 
+2024-05-10 18:10:57 error: PrismaClientValidationError: 
+Invalid `prisma.post.create()` invocation:
+
+{
+  data: {
+    title: "My First Blog Post",
+    content: "This is the content of my first blog post. It's a great day to start blogging!",
+    image: "https://example.com/images/first-post.jpg",
+    published: true,
+    authorId: 1
+              ~
+  }
+}
+
+Argument `authorId`: Invalid value provided. Expected String, provided Int.
+2024-05-10 18:16:20 error: PrismaClientKnownRequestError: 
+Invalid `prisma.post.create()` invocation:
+
+
+Foreign key constraint failed on the field: `Post_authorId_fkey (index)`
+2024-05-10 18:18:46 error: PrismaClientKnownRequestError: 
+Invalid `prisma.post.create()` invocation:
+
+
+Foreign key constraint failed on the field: `Post_authorId_fkey (index)`
+2024-05-10 18:20:38 error: PrismaClientKnownRequestError: 
+Invalid `prisma.post.create()` invocation:
+
+
+Foreign key constraint failed on the field: `Post_authorId_fkey (index)`
+2024-05-11 23:20:10 error: PrismaClientKnownRequestError: 
+Invalid `prisma.post.update()` invocation:
+
+
+Foreign key constraint failed on the field: `Post_authorId_fkey (index)`
+2024-05-14 15:22:48 error: PrismaClientValidationError: 
 Invalid `prisma.user.create()` invocation:
 
 {
   data: {
-    email: "abcde@gmail.com",
-    password: "1111",
-    role: undefined,
-+   name: String
+    name: "abdul manan",
+    email: "abdulMa@gmail.com",
+    role: "user",
+    password: "$2b$10$f2McteI97WUs2FUS4cMlh.g8FhSuayYYWocpAfcfhMv3SHpK66z06"
+  },
+  include: {
+    password: false,
+    ~~~~~~~~
+?   posts?: true
   }
 }
 
-Argument `name` is missing.
-2024-05-10 10:36:51 error: PrismaClientValidationError: 
+Invalid scalar field `password` for include statement on model User. Available options are marked with ?.
+Note that include statements only accept relation fields.
+2024-05-14 15:24:33 error: PrismaClientValidationError: 
 Invalid `prisma.user.create()` invocation:
 
 {
   data: {
-    email: "abcde@gmail.com",
-    password: "1111",
-    role: undefined,
-+   name: String
+    name: "abdul manan",
+    email: "abdulM@gmail.com",
+    role: "user",
+    password: "$2b$10$eoQZitMUTEWUbwCImKB0ouDgm1TJ/KpCbWgFe7EIMcCnhtipzit66"
+  },
+  select: {
+?   id?: true,
+?   name?: true,
+?   email?: true,
+?   role?: true,
+?   password?: true,
+?   createdAt?: true,
+?   updatedAt?: true,
+?   posts?: true,
+?   _count?: true
   }
 }
 
-Argument `name` is missing.
-2024-05-10 10:48:31 error: PrismaClientValidationError: 
+The `select` statement for type User needs at least one truthy value.
+2024-05-14 15:26:23 error: PrismaClientValidationError: 
 Invalid `prisma.user.create()` invocation:
 
 {
   data: {
-    email: "abcde@gmail.com",
-    password: "1111",
-    role: undefined,
-+   name: String
-  }
+    name: "abdul manan",
+    email: "abdulM@gmail.com",
+    role: "user",
+    password: "$2b$10$e6LTvl930keAC3F.0GV9gupvSt53DGX62LTExaToNyps/u07E5lFu"
+  },
+  exclude: [
+  ~~~~~~~
+    "password"
+  ]
 }
 
-Argument `name` is missing.
-2024-05-10 10:49:03 error: PrismaClientValidationError: 
+Unknown argument `exclude`. Available options are marked with ?.
+2024-05-14 15:26:41 error: PrismaClientValidationError: 
 Invalid `prisma.user.create()` invocation:
 
 {
   data: {
-    email: "abcde@gmail.com",
-    password: "1111",
-    role: undefined,
-+   name: String
+    name: "abdul manan",
+    email: "abdulM@gmail.com",
+    role: "user",
+    password: "$2b$10$sqC7MrlS1pEZpD0T4rbdcebI1LRUsNvH85oo/HfPRzqfaut0gtrFS"
+  },
+  exclude: {
+  ~~~~~~~
+    password: true
   }
 }
 
-Argument `name` is missing.
-2024-05-10 11:59:06 error: PrismaClientValidationError: 
-Invalid `prisma.user.create()` invocation:
-
-{
-  data: {
-    email: "abcde@gmail.com",
-    password: undefined,
-    role: undefined,
-+   name: String
-  }
-}
-
-Argument `name` is missing.
-2024-05-10 11:59:48 error: PrismaClientValidationError: 
-Invalid `prisma.user.create()` invocation:
-
-{
-  data: {
-    email: "abcde@gmail.com",
-    password: undefined,
-    role: undefined,
-+   name: String
-  }
-}
-
-Argument `name` is missing.
+Unknown argument `exclude`. Available options are marked with ?.
