@@ -10,6 +10,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use("/api/v1", indexRouter);
 
+const myVar = "abc";
+console.log(myVar);
 app.use("/*", (req, res) => {
   res.status(400).json({
     code: 400,
