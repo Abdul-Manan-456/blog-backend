@@ -1,6 +1,6 @@
 export interface ResponseModel {
-    code: number
-    message: string
-    data: any
-    error?: any
+  code: number;
+  message: string;
+  data: any;
+  error?: any;
 }

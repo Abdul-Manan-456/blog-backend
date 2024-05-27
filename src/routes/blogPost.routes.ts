@@ -1,7 +1,8 @@
 import { Router } from "express";
+
 import { BlogPostController } from "../controller";
-import { blogPostCreate } from "../validations";
 import { authMiddleware, validator } from "../middleware";
+import { blogPostCreate } from "../validations";
 export const router: Router = Router();
 router.get("/", authMiddleware, BlogPostController.getBlogPosts);
 router.get("/:id", BlogPostController.getBlogPostById);

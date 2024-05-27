@@ -1,9 +1,10 @@
 import { NextFunction, Request, Response } from "express";
+
 import { BlogPostService } from "../services";
 import logger from "../utils/winston";
 
 class BlogPostController {
-  constructor() { }
+  constructor() {}
 
   // ------------------ CREATE --------------------
   async createBlogPost(req: Request, res: Response, next: NextFunction) {
@@ -32,7 +33,9 @@ class BlogPostController {
 
   async getBlogPostById(req: Request, res: Response, next: NextFunction) {
     try {
-      const response = await BlogPostService.getBlogPostById(req.params.id as any);
+      const response = await BlogPostService.getBlogPostById(
+        req.params.id as any,
+      );
       return res.status(response.code).json(response);
     } catch (error) {
       logger.error(error);
@@ -44,7 +47,10 @@ class BlogPostController {
 
   async updateBlogPost(req: Request, res: Response, next: NextFunction) {
     try {
-      const response = await BlogPostService.updateBlogPost(req.params.id as any, req.body);
+      const response = await BlogPostService.updateBlogPost(
+        req.params.id as any,
+        req.body,
+      );
       return res.status(response.code).json(response);
     } catch (error) {
       logger.error(error);
@@ -56,7 +62,9 @@ class BlogPostController {
 
   async deleteBlogPost(req: Request, res: Response, next: NextFunction) {
     try {
-      const response = await BlogPostService.deleteBlogPost(req.params.id as any);
+      const response = await BlogPostService.deleteBlogPost(
+        req.params.id as any,
+      );
       return res.status(response.code).json(response);
     } catch (error) {
       logger.error(error);
