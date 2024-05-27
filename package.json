@@ -9,6 +9,7 @@
     "migrate": "npx prisma migrate dev",
     "lint-fix": "pnpm eslint --fix",
     "lint": "pnpm eslint",
+    "type-check": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
     "pre-commit": "add .husky/pre-commit"

@@ -5,7 +5,6 @@ import indexRouter from "./routes";
 import { errorHandler } from "./utils";
 config();
 const app: Express = express();
-const file = "abc";
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
